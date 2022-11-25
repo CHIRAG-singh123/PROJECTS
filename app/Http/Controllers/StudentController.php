@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class StudentController extends Controller
 {
@@ -23,7 +24,7 @@ class StudentController extends Controller
         'stream' => 'required',    
         'sem' => 'required',
         'div' => 'required',
-    'course' => 'required',    
+    'course' =>'required',    
     
     ]);
     Student::create($request->all());
